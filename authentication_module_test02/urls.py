@@ -20,9 +20,9 @@ from auth_module import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', views.home, name = 'name'),
+    path('', views.home, name = 'home'),
 
-    path('signup', views.sigupuser, namr = 'signupuser'),
-    path('login', views.loginuser, name = 'loginuser'),
-    path('logout', views.logoutuser, name = 'logoutuser'),
+    path('signup/', views.signupuser, name = 'signupuser'),
+    path('login/', views.loginuser, name = 'loginuser'),
+    path('logout/', views.logoutuser, name = 'logoutuser'),
 ]
