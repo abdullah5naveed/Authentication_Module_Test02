@@ -1,0 +1,17 @@
+
+    {% if user.is_authenticated %}
+        <h3>You are logged in as: {{user.username}}</h3>
+        <form action="{% url 'logoutuser' %}", method="POST">
+            {% csrf_token %}
+            <button type="submit">LogOut</button>
+        </form>
+    {% else %}
+        <a href="{% url 'signupuser' %}">SignUp</a>
+        <a href="{% url 'loginuser' %}">login</a>
+    {% endif %}
+
+
+
+{% block content %}
+
+{% endblock%}

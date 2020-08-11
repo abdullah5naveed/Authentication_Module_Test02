@@ -1,5 +1,18 @@
+{% extends 'auth_module/base.html' %}
 
 
-
+{% block content %}
 
 <h1>Login User Page</h1>
+
+<form method="POST">
+
+    {% csrf_token %}
+    {{loginform.as_p}}
+    <button type="submit">Login</button>
+
+</form>
+
+
+
+{% endblock %}
